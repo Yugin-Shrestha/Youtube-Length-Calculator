@@ -1,0 +1,93 @@
+
+body {
+    background-color: black;
+    color: white;
+}
+
+body.light-mode {
+    background-color: white;
+    color: black;
+}
+
+.container {
+    max-width: 920px;
+    width: 92%;
+    margin: 30px auto;
+}
+
+.navbar {
+    padding: 2px 50px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #020723;
+    border-radius: 10px;
+    color: green;
+}
+
+body.light-mode .navbar {
+    background-color: #eeeeee;
+}
+
+.navbar a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.border {
+    padding: 5px;
+    border: 2px solid transparent;
+}
+
+.border:hover {
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+
+.input {
+    padding: 10px; 
+    background-color: #020723;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+body.light-mode .input {
+    background-color: #eeeeee;
+}
+
+#youtubeUrl {
+    width: 100%;
+    height: 120px;
+    box-sizing: border-box;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    background-color: #08113D;
+    color: white;
+}
+
+body.light-mode #youtubeUrl {
+    background-color: rgb(255, 249, 249);
+    color: black;
+}
+
+#calculateBtn{
+    background-color: #c34531;
+    color: white;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#calculateBtn:hover{
+    background-color: red;
+}

@@ -1,0 +1,42 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="navbar">
+                    <div class="logo border">
+                        <a href="/"><img src="logo.svg" alt="Logo" height="44px"></a>
+                    </div>
+                    <div class="icon">
+                        <i class="fa-solid fa-globe border"></i>
+                        <i id="themeIcon" class="fa-solid fa-moon border"></i>
+                        <a href="https://github.com/Yugin-Shrestha" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-github border"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>     
+        </header>
+
+        <main>
+            <div class="input container">
+                <h2>Find the length of any YouTube video/Playlist</h2>
+                <p></p>
+                <p> Paste a playlist URL or video link below — up to 5 at once.</p>
+                <p></p>
+                <p> Playlist link, ID, or video URL — one per line (up to 5)</p>
+                <p></p>
+                <textarea id="youtubeUrl" placeholder="youtube.com/watch?v=... &#10;youtube.com/playlist?list=..."></textarea>
+                <p></p>
+                <button  id="calculateBtn">Analyze playlist</button>
+            </div>
+    <script src="script.js"></script>    
+    </body>
+    </html>
