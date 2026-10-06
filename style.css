@@ -91,3 +91,7 @@ body.light-mode #youtubeUrl {
 #calculateBtn:hover{
     background-color: red;
 }
+
+.result {
+    display: none;
+}

@@ -7,6 +7,13 @@ icon.addEventListener("click", () => {
     document.body.classList.toggle("light-mode");
 });
 
+function formatTime(seconds) {
+    const h = Math.floor(seconds / 3600);
+    const m = Math.floor((seconds % 3600) / 60);
+    const s = Math.floor(seconds % 60);
+    return `${h}h ${m}m ${s}s`;
+}
+
 const input = document.getElementById("youtubeUrl");
 const button = document.getElementById("calculateBtn");
 const result = document.getElementById("result");
@@ -22,7 +29,14 @@ button.addEventListener("click", async () => {
         if(url.trim() === "") {
             continue;
         }
-        const videoUrl = new URL(url);
+        let videoUrl;
+
+        try {
+            videoUrl = new URL(url);
+        } catch {
+            console.log("Invalid URL:", url);
+            continue;
+        }
 
         let videoId;
         let playlistId;
@@ -99,14 +113,14 @@ button.addEventListener("click", async () => {
             console.log(totalSeconds);
         };
     };    
-        const totalHours = Math.floor(totalSeconds / 3600);
-        const totalMinutes = Math.floor((totalSeconds % 3600) / 60);
-        const totalRemainingSeconds = totalSeconds % 60;
+    result.innerHTML = `
+    <strong>Total Duration:</strong><br>
+    Total video length : ${formatTime(totalSeconds)}<br>
+    At 1.25x : ${formatTime(totalSeconds / 1.25)}<br>
+    At 1.50x : ${formatTime(totalSeconds / 1.5)}<br>
+    At 1.75x : ${formatTime(totalSeconds / 1.75)}<br>
+    At 2.00x : ${formatTime(totalSeconds / 2)}`;
 
-        console.log(totalHours);
-        console.log(totalMinutes);
-        console.log(totalRemainingSeconds);
-        result.textContent = `Total Duration: ${totalHours}h ${totalMinutes}m ${totalRemainingSeconds}s`;
-
+    document.querySelector(".result").style.display = "block";
 });
 
